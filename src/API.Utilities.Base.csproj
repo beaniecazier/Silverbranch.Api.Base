@@ -65,7 +65,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250706-023217" />
+      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250707-140815" />
       <PackageReference Include="Gay.Silverbranch.pkg.API.Utilities.Contract" Version="1.0.0-alpha-20250702-162226" />
       <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.1" />
     </ItemGroup>
