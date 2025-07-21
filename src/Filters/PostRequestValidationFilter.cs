@@ -7,17 +7,17 @@ using Serilog;
 
 namespace Gay.Silverbranch.API.Utilities.Backend.Filters;
 
-public abstract class UpdateRequestValidationFilter<T> : IEndpointFilter
-    where T : PutBaseModelRequest
+public abstract class PostRequestValidationFilter<T> : IEndpointFilter
+where T : PostBaseModelRequest
 {
     protected readonly IValidator<T> _requestValidator;
 
-    public UpdateRequestValidationFilter(
+    public PostRequestValidationFilter(
         IValidator<T> requestValidator)
     {
         _requestValidator = requestValidator;
     }
-    
+
     public async ValueTask<object?> InvokeAsync(EndpointFilterInvocationContext context, EndpointFilterDelegate next)
     {
         var request = context.Arguments
