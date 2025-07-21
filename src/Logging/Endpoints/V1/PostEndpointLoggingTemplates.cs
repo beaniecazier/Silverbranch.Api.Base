@@ -1,7 +1,6 @@
-using Gay.Silverbranch.API.Models;
 using Serilog;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Logging.Endpoints.V1;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Logging.Endpoints.V1;
 
 public class PostEndpointLoggingTemplates
 {

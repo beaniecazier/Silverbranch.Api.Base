@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Middleware;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Middleware;
 
 public class UsernameIdentifierMiddleware
 {

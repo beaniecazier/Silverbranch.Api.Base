@@ -1,10 +1,10 @@
 using Microsoft.Data.SqlClient;
 
-using Gay.Silverbranch.API.BLL.Options.V1;
-using Gay.Silverbranch.API.Models.Enum.V1;
-using Gay.Silverbranch.API.Utilities.Contract.Requests;
+using Gay.Silverbranch.Api.Bll.Options.V1;
+using Gay.Silverbranch.Api.Models.Enum.V1;
+using Gay.Silverbranch.Api.Utilities.Contract.Requests.V1;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Mapping.V1;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Mapping.V1;
 
 public static class GetAllOptionsMappings
 {

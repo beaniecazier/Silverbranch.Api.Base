@@ -1,11 +1,10 @@
 using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
-using Gay.Silverbranch.API.Models.Enum;
-using Gay.Silverbranch.API.Models.Enum.V1;
+using Gay.Silverbranch.Api.Models.Enum.V1;
 using Gay.Silverbranch.Utilities.Security.Constants;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Middleware;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Middleware;
 
 public class OwnershipTypeMiddleware
 {
