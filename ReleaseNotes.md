@@ -1,6 +1,6 @@
-﻿# SILVERBRANCH CODEWORKS API BLL Utilities
+﻿# Silverbranch Codeworks API Backend Base Utilities
 
-## Version [1.1.0-alpha] - 2025-07-02
+## Version [1.0.0-alpha] - 2025-07-21
 
 **Type:** Alpha  
 **Stability:** ⚠️ Experimental – Not recommended for production use.
@@ -19,7 +19,7 @@ This alpha release introduces early implementations of planned features for vers
 
 ### ➕ New Features ➕
 
-- stuff
+- 
 
 ---
 
