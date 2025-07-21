@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Http;
 using System.Security.Claims;
 
 using Gay.Silverbranch.API.Models.Enum;
+using Gay.Silverbranch.API.Models.Enum.V1;
 using Gay.Silverbranch.Utilities.Security.Constants;
 
 namespace Gay.Silverbranch.API.Utilities.Backend.Middleware;

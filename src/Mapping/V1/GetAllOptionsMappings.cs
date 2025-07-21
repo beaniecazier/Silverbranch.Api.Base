@@ -1,7 +1,8 @@
-using Gay.Silverbranch.API.BLL.Options.V1;
-using Gay.Silverbranch.API.Models.Enum;
-using Gay.Silverbranch.API.Utilities.Contract.Requests;
 using Microsoft.Data.SqlClient;
+
+using Gay.Silverbranch.API.BLL.Options.V1;
+using Gay.Silverbranch.API.Models.Enum.V1;
+using Gay.Silverbranch.API.Utilities.Contract.Requests;
 
 namespace Gay.Silverbranch.API.Utilities.Backend.Mapping.V1;
 
