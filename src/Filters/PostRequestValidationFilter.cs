@@ -1,11 +1,10 @@
 using FluentValidation;
 using FluentValidation.Results;
-using Gay.Silverbranch.API.Utilities.Contract.Requests;
-using Gay.Silverbranch.API.Utilities.Contract.Requests.V1;
+using Gay.Silverbranch.Api.Utilities.Contract.Requests.V1;
 using Microsoft.AspNetCore.Http;
 using Serilog;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Filters;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Filters;
 
 public abstract class PostRequestValidationFilter<T> : IEndpointFilter
 where T : PostBaseModelRequest

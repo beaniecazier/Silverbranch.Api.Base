@@ -13,7 +13,7 @@
         <Authors>Tiabeanie Cazier</Authors>
         <Product>API Backend Base Utilities</Product>
         <Title>$(Company) $(Product)</Title>
-        <AssemblyName>API.Utilities.Backend</AssemblyName>
+        <AssemblyName>Api.Utilities.Backend</AssemblyName>
         <RootNamespace>Gay.Silverbranch.$(AssemblyName)</RootNamespace>
         <PackageId>Gay.Silverbranch.pkg.$(AssemblyName)</PackageId>
         <VersionPrefix>1.0.0</VersionPrefix>
@@ -90,13 +90,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250721-150125" />
-      <PackageReference Include="Gay.Silverbranch.pkg.API.Utilities.Contract" Version="1.0.0-alpha-20250721-151726" />
+      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250721-171437" />
+      <PackageReference Include="Gay.Silverbranch.pkg.API.Utilities.Contract" Version="1.0.0-alpha-20250721-170847" />
       <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Swagger\Metadata\" />
     </ItemGroup>
 
 </Project>

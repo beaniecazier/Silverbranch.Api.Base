@@ -1,7 +1,7 @@
-using Gay.Silverbranch.API.Utilities.Backend.Middleware;
+using Gay.Silverbranch.Api.Utilities.Backend.Middleware;
 using Microsoft.AspNetCore.Builder;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Extensions.Middleware;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Extensions.Middleware;
 
 public static class UsernameIdentifierMiddlewareExtensions
 {

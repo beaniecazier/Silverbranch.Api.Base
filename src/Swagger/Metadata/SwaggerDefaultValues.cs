@@ -2,9 +2,10 @@
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
+
 //using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Swagger;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Swagger.Metadata;
 
 #pragma warning disable CS1591
 

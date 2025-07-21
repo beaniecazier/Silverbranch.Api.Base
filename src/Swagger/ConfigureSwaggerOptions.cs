@@ -5,7 +5,7 @@ using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Swagger;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Swagger;
 
 #pragma warning disable CS1591
 

@@ -1,8 +1,7 @@
-using Gay.Silverbranch.API.BLL.Options.V1;
-using Gay.Silverbranch.API.Models;
+using Gay.Silverbranch.Api.Bll.Options.V1;
 using Serilog;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Logging.Endpoints.V1;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Logging.Endpoints.V1;
 
 public class GetAllEndpointLoggingTemplates
 {

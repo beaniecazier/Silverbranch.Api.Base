@@ -1,9 +1,8 @@
 ﻿using CommandLine;
-using Gay.Silverbranch.Api.Utilities.CommandLine;
-using Gay.Silverbranch.Api.Utilities.CommandLine.Interface;
-using Gay.Silverbranch.API.Utilities.Common.CommandLine;
+using Gay.Silverbranch.Api.Utilities.Common.CommandLine;
+using Gay.Silverbranch.Api.Utilities.Common.CommandLine.Interface;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.CommandLine;
+namespace Gay.Silverbranch.Api.Utilities.Backend.CommandLine;
 
 #pragma warning disable CS1591
 

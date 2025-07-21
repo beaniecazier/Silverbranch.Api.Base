@@ -1,8 +1,8 @@
 using Serilog;
 
-using Gay.Silverbranch.API.Models.Entities.V1;
+using Gay.Silverbranch.Api.Models.Entities.V1;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Logging.Endpoints.V1;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Logging.Endpoints.V1;
 
 public class DeleteEndpointLoggingTemplates
 {

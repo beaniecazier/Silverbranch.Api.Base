@@ -1,12 +1,13 @@
 ﻿using System.Reflection;
-using Gay.Silverbranch.API.Utilities.Backend.Swagger;
+using Gay.Silverbranch.Api.Utilities.Backend.Swagger;
+using Gay.Silverbranch.Api.Utilities.Backend.Swagger.Metadata;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Gay.Silverbranch.API.Utilities.Backend.Extensions.ServiceCollection;
+namespace Gay.Silverbranch.Api.Utilities.Backend.Extensions.ServiceCollection;
 
 #pragma warning disable CS1591
 
