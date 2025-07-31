@@ -1,0 +1,98 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <OutputType>Library</OutputType>
+        <!--        <AllowUnsafeBlocks>false</AllowUnsafeBlocks>-->
+        <!--        <UseMauiEssentials>false</UseMauiEssentials>-->
+        <!--        <EnableDefaultCompileItems>true</EnableDefaultCompileItems>-->
+
+        <Company>Silverbranch Codeworks</Company>
+        <Authors>Tiabeanie Cazier</Authors>
+        <Product>API Backend Base Utilities</Product>
+        <Title>$(Company) $(Product)</Title>
+        <AssemblyName>Api.Utilities.Backend</AssemblyName>
+        <RootNamespace>Gay.Silverbranch.$(AssemblyName)</RootNamespace>
+        <PackageId>Gay.Silverbranch.pkg.$(AssemblyName)</PackageId>
+        <VersionPrefix>1.0.0</VersionPrefix>
+        <VersionSuffix>alpha-$([System.DateTime]::UtcNow.ToString("yyyyMMdd-HHmmss"))</VersionSuffix>
+        <PackageProjectUrl>silverbranch-codeworks.com</PackageProjectUrl>
+        <!--    <RepositoryUrl></RepositoryUrl>-->
+
+        <PackageIcon>Icon.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+
+        <AssemblyVersion>$(VersionPrefix).0</AssemblyVersion>
+        <FileVersion>$(VersionPrefix).0</FileVersion>
+
+        <PackageReleaseNotes>
+            # Silverbranch Codeworks API Backend Base Utilities
+
+            ## Version [1.0.0-alpha] - 2025-07-21
+
+            **Type:** Alpha
+            **Stability:** ⚠️ Experimental – Not recommended for production use.
+
+            ---
+
+            ### 🚧 Overview
+
+            This alpha release introduces early implementations of planned features for version 1.0.0.
+
+            > ⚠️ APIs and behavior may change without notice in future builds.
+
+            > 💡 Use this release to explore upcoming features and provide feedback.
+
+            ---
+
+            ### ➕ New Features ➕
+
+            -
+
+            ---
+
+            ### 🔗 Related Links 🔗
+
+            - [Full Changelog](CHANGELOG.md#Version-100-alpha)
+        </PackageReleaseNotes>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="..\Icon.png">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>Icon.png</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="..\README.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>README.md</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Include="..\LICENSE.txt">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>LICENSE.txt</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <Content Include="..\ReleaseNotes.md">
+            <Pack>True</Pack>
+            <PackagePath></PackagePath>
+            <Link>ReleaseNotes.md</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250731-181707" />
+      <PackageReference Include="Gay.Silverbranch.pkg.API.Utilities.Contract" Version="1.0.0-alpha-20250731-184338" />
+      <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.1" />
+    </ItemGroup>
+
+</Project>
