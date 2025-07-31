@@ -31,33 +31,44 @@ public class GetByIdEndpointLoggingTemplates
     }
     
     public static void LogEndpointSuccess(
-        BaseModel model,
+        string modelName,
+        string modelId,
         string callingUserId)
     {
         Log.Information(
-            "ModelMetaInfo Model with id:{Succ.CommonIdentity} was successfully found in the database",
-            model.CommonIdentity);
+            messageTemplate: "{modelName} Model with id:{modelId} was successfully found in the database for USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 
     public static void LogEndpointFailureNullRef(
         Exception ex,
+        string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Model with ID:{@id} does not exist, or you are not allowed to view this data",
-            propertyValue: modelId);
+            messageTemplate: "{modelName} Model with ID:{modelId} does not exist or " +
+                             "USER:{userId} is not allowed to view this data",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 
     public static void LogEndpointFailureServerError(
         Exception ex,
+        string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Server issue encountered while trying to get ModelMetaInfo Model with ID:{id} from the database",
-            propertyValue: modelId);
+            messageTemplate: "Server issue encountered while trying to get {modelName} Model with ID:{modelId} " +
+                             "from the database to respond to call from USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 }

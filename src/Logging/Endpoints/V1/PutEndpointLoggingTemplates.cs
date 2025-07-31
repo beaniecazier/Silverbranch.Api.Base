@@ -25,36 +25,50 @@ public class PutEndpointLoggingTemplates
         string callingUserId)
     {
         Log.Information(
-            "Put {modelName} Model Endpoint called by {username}",
+            "Put {modelName} Model Endpoint called by USER:{useId}",
             propertyValue0: modelName,
             propertyValue1: callingUserId);
     }
     
     public static void LogEndpointSuccess(
-        string id,
+        string modelName,
+        string modelId,
         string callingUserId)
     {
         Log.Information(
-            messageTemplate: "ModelMetaInfo Model with id:{id} was successfully marked deleted",
-            propertyValue: id);
+            messageTemplate: "{modelName} Model with ID:{modelId} was successfully marked updated by USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 
-    public static void LogEndpointFailureNullRef(Exception ex, string modelId, string callingUserId)
-    {
-        Log.Error(
-            exception: ex,
-            messageTemplate: "ModelMetaInfo Model with ID:{id} does not exist or you are not allowed to view this data",
-            propertyValue: modelId);
-    }
-
-    public static void LogEndpointFailureServerError(
+    public static void LogEndpointFailureNullRef(
         Exception ex,
+        string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Server issue encountered while trying to update ModelMetaInfo Model with ID:{id} from the database",
-            propertyValue: modelId);
+            messageTemplate: "{modelName} Model with ID:{modelId} does not exist or " +
+                             "USER:{userId} is not allowed to view this data",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
+    }
+
+    public static void LogEndpointFailureServerError(
+        Exception ex,
+        string modelName,
+        string modelId,
+        string callingUserId)
+    {
+        Log.Error(
+            exception: ex,
+            messageTemplate: "Server issue encountered while trying to update {modelName} Model with ID:{modelId} " +
+                             "from the database to respond to call from USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 }

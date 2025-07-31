@@ -25,34 +25,50 @@ public class DeleteEndpointLoggingTemplates
         string callingUserId)
     {
         Log.Information(
-            "Delete {modelName} Model Endpoint called by {username}",
+            "Delete {modelName} Model Endpoint called by USER:{userid}",
             propertyValue0: modelName,
             propertyValue1: callingUserId);
     }
     
-    public static void LogEndpointSuccess(BaseModel model)
+    public static void LogEndpointSuccess(
+        string modelName,
+        string modelId,
+        string callingUserId)
     {
         Log.Information(
-            messageTemplate: "ModelMetaInfo Model with id:{id} was successfully marked deleted",
-            propertyValue: model.CommonIdentity);
+            messageTemplate: "{modelName} Model with ID:{modelId} was successfully marked deleted by USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 
-    public static void LogEndpointFailureNullRef(Exception ex, string modelId, string callingUserId)
-    {
-        Log.Error(
-            exception: ex,
-            messageTemplate: "ModelMetaInfo Model with ID:{id} does not exist",
-            propertyValue: modelId);
-    }
-
-    public static void LogEndpointFailureServerError(
+    public static void LogEndpointFailureNullRef(
         Exception ex,
+        string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Server issue encountered while trying to delete ModelMetaInfo Model with ID:{id} from the database",
-            propertyValue: modelId);
+            messageTemplate: "{modelName} Model with ID:{modelId} does not exist or " +
+                             "USER:{userId} is not allowed to view this data",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
+    }
+
+    public static void LogEndpointFailureServerError(
+        Exception ex,
+        string modelName,
+        string modelId,
+        string callingUserId)
+    {
+        Log.Error(
+            exception: ex,
+            messageTemplate: "Server issue encountered while trying to delete {modelName} Model with ID:{modelId} " +
+                             "from the database to respond to call from USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 }

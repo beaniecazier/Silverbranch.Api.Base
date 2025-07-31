@@ -23,26 +23,33 @@ public class PostEndpointLoggingTemplates
         string callingUserId)
     {
         Log.Information(
-            "Post {modelName} Model Endpoint called by {username}",
+            messageTemplate: "Post {modelName} Model Endpoint called by USER:{userId}",
             propertyValue0: modelName,
             propertyValue1: callingUserId);
     }
     
     public static void LogEndpointSuccess(
-        string id,
+        string modelName,
+        string modelId,
         string callingUserId)
     {
         Log.Information(
-            messageTemplate: "ModelMetaInfo Model Created with id {id}",
-            propertyValue: id);
+            messageTemplate: "Successfully created new {modelName} Model with ID:{modelId} for request by USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: modelId,
+            propertyValue2: callingUserId);
     }
 
     public static void LogEndpointFailureServerError(
         Exception ex,
-        string callingUserId)
+        string callingUserId,
+        string modelName)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Server issue encountered while trying to add a new ModelMetaInfo Model to the database");
+            messageTemplate: "Server issue encountered while trying to add a new {modelName} Model " +
+                             "to the database by request of USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: callingUserId);
     }
 }

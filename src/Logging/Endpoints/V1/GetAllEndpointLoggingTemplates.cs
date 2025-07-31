@@ -5,14 +5,16 @@ namespace Gay.Silverbranch.Api.Utilities.Backend.Logging.Endpoints.V1;
 
 public class GetAllEndpointLoggingTemplates
 {
-    public static void LogAddServices(string modelName)
+    public static void LogAddServices(
+        string modelName)
     {
         Log.Information(
             messageTemplate: "The specific services related to the {modelName} Model GetAll Endpoint are being registered",
             propertyValue: modelName);
     }
     
-    public static void LogDefined(string modelName)
+    public static void LogDefined(
+        string modelName)
     {
         Log.Information(
             messageTemplate: "Now adding {modelName} Model GetAll Endpoint",
@@ -24,28 +26,37 @@ public class GetAllEndpointLoggingTemplates
         string callingUserId)
     {
         Log.Information(
-            "GetAll {modelName} Model Endpoint called by {username}",
+            messageTemplate: "GetAll {modelName} Model Endpoint called by USER:{userId}",
             propertyValue0: modelName,
             propertyValue1: callingUserId);
     }
     
     public static void LogEndpointSuccess(
+        string modelName,
+        GetAllModelsOptions options,
         int totalNumberOfResponses,
-        GetAllModelsOptions options)
+        string callingUserId)
     {
         Log.Information(
-            messageTemplate: "Found {count} ModelMetaInfo Models matching request {request}}",
-            propertyValue0: totalNumberOfResponses,
-            propertyValue1: options);
+            messageTemplate: "Found {count} {modelName} Models matching request {request} made by USER:{userId}",
+            totalNumberOfResponses,
+            modelName,
+            options,
+            callingUserId);
     }
 
     public static void LogEndpointFailureServerError(
         Exception ex,
-        GetAllModelsOptions options)
+        string modelName,
+        GetAllModelsOptions options,
+        string callingUserId)
     {
         Log.Error(
             exception: ex,
-            messageTemplate: "Server issue encountered while trying to get all ModelMetaInfo Models from the database that matched request {request}",
-            propertyValue: options);
+            messageTemplate: "Server issue encountered while trying to get all {modelName} Models from the database " +
+                             "that matched request {request} made by USER:{userId}",
+            propertyValue0: modelName,
+            propertyValue1: options,
+            propertyValue2: callingUserId);
     }
 }
