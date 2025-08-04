@@ -43,13 +43,13 @@ public class DeleteEndpointLoggingTemplates
     }
 
     public static void LogEndpointFailureNullRef(
-        Exception ex,
+        Exception exception,
         string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
-            exception: ex,
+            exception: exception,
             messageTemplate: "{modelName} Model with ID:{modelId} does not exist or " +
                              "USER:{userId} is not allowed to view this data",
             propertyValue0: modelName,
@@ -58,13 +58,13 @@ public class DeleteEndpointLoggingTemplates
     }
 
     public static void LogEndpointFailureServerError(
-        Exception ex,
+        Exception exception,
         string modelName,
         string modelId,
         string callingUserId)
     {
         Log.Error(
-            exception: ex,
+            exception: exception,
             messageTemplate: "Server issue encountered while trying to delete {modelName} Model with ID:{modelId} " +
                              "from the database to respond to call from USER:{userId}",
             propertyValue0: modelName,

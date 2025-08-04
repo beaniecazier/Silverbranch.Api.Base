@@ -41,12 +41,12 @@ public class PostEndpointLoggingTemplates
     }
 
     public static void LogEndpointFailureServerError(
-        Exception ex,
+        Exception exception,
         string callingUserId,
         string modelName)
     {
         Log.Error(
-            exception: ex,
+            exception: exception,
             messageTemplate: "Server issue encountered while trying to add a new {modelName} Model " +
                              "to the database by request of USER:{userId}",
             propertyValue0: modelName,

@@ -46,13 +46,13 @@ public class GetAllEndpointLoggingTemplates
     }
 
     public static void LogEndpointFailureServerError(
-        Exception ex,
+        Exception exception,
         string modelName,
         GetAllModelsOptions options,
         string callingUserId)
     {
         Log.Error(
-            exception: ex,
+            exception: exception,
             messageTemplate: "Server issue encountered while trying to get all {modelName} Models from the database " +
                              "that matched request {request} made by USER:{userId}",
             propertyValue0: modelName,
