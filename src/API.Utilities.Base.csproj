@@ -90,9 +90,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <PackageReference Include="Gay.Silverbranch.pkg.Api.BLL" Version="1.0.0-alpha-20250731-181707" />
-      <PackageReference Include="Gay.Silverbranch.pkg.API.Utilities.Contract" Version="1.0.0-alpha-20250731-184338" />
       <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="8.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\bll\src\BLL.Utilities.csproj" />
+      <ProjectReference Include="..\..\contracts\src\API.Utilities.Contract.csproj" />
     </ItemGroup>
 
 </Project>
